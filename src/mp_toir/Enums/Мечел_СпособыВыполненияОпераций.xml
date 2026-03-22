@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Enum uuid="1bd362a1-a959-4349-9d7e-41afeac854f4">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.Мечел_СпособыВыполненияОпераций" category="Ref">
+				<xr:TypeId>5a6b1035-6771-4deb-a6f3-2297fcd13424</xr:TypeId>
+				<xr:ValueId>3783a165-03fb-4446-ad24-e1e79a86a6e2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.Мечел_СпособыВыполненияОпераций" category="Manager">
+				<xr:TypeId>a11997b7-2932-43a8-ab52-0e15445f6927</xr:TypeId>
+				<xr:ValueId>02701d27-e222-4540-8a60-15c48a8402dc</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.Мечел_СпособыВыполненияОпераций" category="List">
+				<xr:TypeId>760d67b8-f516-43e9-b8e9-fff5326261f8</xr:TypeId>
+				<xr:ValueId>5200a830-f255-4ae0-be56-6bafa4fe761c</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Мечел_СпособыВыполненияОпераций</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мечел: Способы выполнения операций</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="63a874ed-3b34-4228-b0e9-a34361a9979f">
+				<Properties>
+					<Name>Визуально</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Визуально</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="af5ce45d-4c9a-4a04-bb8f-51796ed3af49">
+				<Properties>
+					<Name>ВизуальноВручную</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Визуально, вручную</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="aff9d005-6b78-4d57-aef4-54b3a2e72f55">
+				<Properties>
+					<Name>ВизуальноЩупДатчик</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Визуально, щуп, датчик</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8a0b8986-5d93-40aa-aabe-0dac79b439f5">
+				<Properties>
+					<Name>Инструментально</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструментально</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

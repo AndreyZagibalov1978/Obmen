@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Родитель" id="4">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ВерсияДанныхЕРП" id="7">
+			<DataPath>Объект.ВерсияДанныхЕРП</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВерсияДанныхЕРПКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВерсияДанныхЕРПРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Pages name="Страницы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="ГруппаПоказателиНаработки" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показатели наработки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПоказателиНаработкиРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<Table name="ПоказателиНаработки" id="14">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПоказателиНаработки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПоказателиНаработкиКонтекстноеМеню" id="15"/>
+							<AutoCommandBar name="ПоказателиНаработкиКоманднаяПанель" id="16"/>
+							<ExtendedTooltip name="ПоказателиНаработкиРасширеннаяПодсказка" id="17"/>
+							<SearchStringAddition name="ПоказателиНаработкиСтрокаПоиска" id="18">
+								<AdditionSource>
+									<Item>ПоказателиНаработки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоказателиНаработкиСтрокаПоискаКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ПоказателиНаработкиСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПоказателиНаработкиСостояниеПросмотра" id="21">
+								<AdditionSource>
+									<Item>ПоказателиНаработки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоказателиНаработкиСостояниеПросмотраКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="ПоказателиНаработкиСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПоказателиНаработкиУправлениеПоиском" id="24">
+								<AdditionSource>
+									<Item>ПоказателиНаработки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоказателиНаработкиУправлениеПоискомКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ПоказателиНаработкиУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПоказателиНаработкиНомерСтроки" id="27">
+									<DataPath>Объект.ПоказателиНаработки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПоказателиНаработкиНомерСтрокиКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ПоказателиНаработкиНомерСтрокиРасширеннаяПодсказка" id="29"/>
+								</LabelField>
+								<InputField name="ПоказателиНаработкиПоказательНаработки" id="30">
+									<DataPath>Объект.ПоказателиНаработки.ПоказательНаработки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ПоказателиНаработкиПоказательНаработкиКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ПоказателиНаработкиПоказательНаработкиРасширеннаяПодсказка" id="32"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Группамп_ВидыПроверок" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виды проверок</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группамп_ВидыПроверокРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<Table name="мп_ВидыПроверок" id="35">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.мп_ВидыПроверок</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="мп_ВидыПроверокКонтекстноеМеню" id="36"/>
+							<AutoCommandBar name="мп_ВидыПроверокКоманднаяПанель" id="37"/>
+							<ExtendedTooltip name="мп_ВидыПроверокРасширеннаяПодсказка" id="38"/>
+							<SearchStringAddition name="мп_ВидыПроверокСтрокаПоиска" id="39">
+								<AdditionSource>
+									<Item>мп_ВидыПроверок</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="мп_ВидыПроверокСтрокаПоискаКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="мп_ВидыПроверокСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="мп_ВидыПроверокСостояниеПросмотра" id="42">
+								<AdditionSource>
+									<Item>мп_ВидыПроверок</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="мп_ВидыПроверокСостояниеПросмотраКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="мп_ВидыПроверокСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="мп_ВидыПроверокУправлениеПоиском" id="45">
+								<AdditionSource>
+									<Item>мп_ВидыПроверок</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="мп_ВидыПроверокУправлениеПоискомКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="мп_ВидыПроверокУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="мп_ВидыПроверокНомерСтроки" id="48">
+									<DataPath>Объект.мп_ВидыПроверок.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="мп_ВидыПроверокНомерСтрокиКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="мп_ВидыПроверокНомерСтрокиРасширеннаяПодсказка" id="50"/>
+								</LabelField>
+								<InputField name="мп_ВидыПроверокВидПроверокОборудования" id="51">
+									<DataPath>Объект.мп_ВидыПроверок.ВидПроверокОборудования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="мп_ВидыПроверокВидПроверокОборудованияКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="мп_ВидыПроверокВидПроверокОборудованияРасширеннаяПодсказка" id="53"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КлассыОбъектовЭксплуатации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

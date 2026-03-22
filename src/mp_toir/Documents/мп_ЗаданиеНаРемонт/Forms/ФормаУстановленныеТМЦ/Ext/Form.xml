@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ОбъектЭксплуатации" id="40">
+			<DataPath>ОбъектЭксплуатации</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<MultiLine>true</MultiLine>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОбъектЭксплуатацииКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ОбъектЭксплуатацииРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="Узел" id="43">
+			<DataPath>Узел</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<MultiLine>true</MultiLine>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="УзелКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="УзелРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<Table name="УстановленныеТМЦ" id="1" DisplayImportance="High">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<MultipleChoice>true</MultipleChoice>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>УстановленныеТМЦ</DataPath>
+			<SearchStringLocation>FormCaption</SearchStringLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УстановленныеТМЦКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="УстановленныеТМЦКонтекстноеМенюПеренестиВДокумент" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПеренестиВДокумент</CommandName>
+						<ExtendedTooltip name="УстановленныеТМЦКонтекстноеМенюПеренестиВДокументРасширеннаяПодсказка" id="47"/>
+					</Button>
+					<Button name="УстановленныеТМЦКонтекстноеМенюПросмотрЗаписи" id="50">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПросмотрЗаписи</CommandName>
+						<ExtendedTooltip name="УстановленныеТМЦКонтекстноеМенюПросмотрЗаписиРасширеннаяПодсказка" id="51"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="УстановленныеТМЦКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="УстановленныеТМЦРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="УстановленныеТМЦСтрокаПоиска" id="5" DisplayImportance="VeryHigh">
+				<AdditionSource>
+					<Item>УстановленныеТМЦ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поиск</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="УстановленныеТМЦСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="УстановленныеТМЦСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УстановленныеТМЦСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>УстановленныеТМЦ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УстановленныеТМЦСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="УстановленныеТМЦСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УстановленныеТМЦУправлениеПоиском" id="11" DisplayImportance="VeryHigh">
+				<AdditionSource>
+					<Item>УстановленныеТМЦ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поиск</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="УстановленныеТМЦУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="УстановленныеТМЦУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">УстановленныеТМЦПередНачаломДобавления</Event>
+				<Event name="BeforeRowChange">УстановленныеТМЦПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="УстановленныеТМЦГруппаНоменклатура" id="38">
+					<ReadOnly>true</ReadOnly>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установленные ТМЦГруппа номенклатура</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="УстановленныеТМЦГруппаНоменклатураРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<ColumnGroup name="УстановленныеТМЦГруппаНоменклатурв" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установленные ТМЦГруппа номенклатурв</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установленные ТМЦГруппа номенклатурв</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
+							<ExtendedTooltip name="УстановленныеТМЦГруппаНоменклатурвРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<InputField name="УстановленныеТМЦНоменклатура" id="23">
+									<DataPath>УстановленныеТМЦ.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="УстановленныеТМЦНоменклатураКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="УстановленныеТМЦНоменклатураРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="УстановленныеТМЦКод" id="52">
+									<DataPath>УстановленныеТМЦ.Код</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="УстановленныеТМЦКодКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="УстановленныеТМЦКодРасширеннаяПодсказка" id="54"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="УстановленныеТМЦХарактеристика" id="26">
+							<DataPath>УстановленныеТМЦ.Характеристика</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="УстановленныеТМЦХарактеристикаКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="УстановленныеТМЦХарактеристикаРасширеннаяПодсказка" id="28"/>
+						</InputField>
+						<ColumnGroup name="УстановленныеТМЦГруппаСерия" id="48">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установленные ТМЦГруппа серия</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="УстановленныеТМЦГруппаСерияРасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<InputField name="УстановленныеТМЦСерия" id="29">
+									<DataPath>УстановленныеТМЦ.Серия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<MultiLine>true</MultiLine>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="УстановленныеТМЦСерияКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="УстановленныеТМЦСерияРасширеннаяПодсказка" id="31"/>
+								</InputField>
+								<InputField name="УстановленныеТМЦКоличество" id="32">
+									<DataPath>УстановленныеТМЦ.Количество</DataPath>
+									<Visible>false</Visible>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="УстановленныеТМЦКоличествоКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="УстановленныеТМЦКоличествоРасширеннаяПодсказка" id="34"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="УстановленныеТМЦ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установленные ТМЦ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ОбъектЭксплуатации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект эксплуатации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ОбъектыЭксплуатации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Узел" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Узел</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УзлыОбъектовЭксплуатации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидНоменклатуры" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Характеристика" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Серия" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Код" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>11</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОбъектЭксплуатации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект эксплуатации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОбъектыЭксплуатации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Узел" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УзлыОбъектовЭксплуатации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СохранитьИзменения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбраннаяНоменклатура" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбраннаяХарактеристика" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная характеристика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбраннаяСерия" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная серия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаменяемыеВидыНоменклатуры" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменяемые виды номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПеренестиВДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВДокумент</Action>
+		</Command>
+		<Command name="ЗакрытьФорму" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="ПросмотрЗаписи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотр записи...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотр записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПросмотрЗаписи</Action>
+		</Command>
+	</Commands>
+</Form>

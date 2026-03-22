@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="33">
+			<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<Page name="ОбменДанными" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обмен данными</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обмен данными</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбменДаннымиРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкаОбмена" id="41">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбор формы обмена данными</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка обмена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаНастройкаОбменаРасширеннаяПодсказка" id="42"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПояснение" id="61">
+									<TextColor>style:AccentColor</TextColor>
+									<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При значении 0 обмен не выполняется</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ДекорацияПояснениеРасширеннаяПодсказка" id="63"/>
+								</LabelDecoration>
+								<CheckBoxField name="ОнлайнОбменДанными" id="16">
+									<TitleTextColor>style:AccentColor</TitleTextColor>
+									<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОнлайнОбменДаннымиКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ОнлайнОбменДаннымиРасширеннаяПодсказка" id="18"/>
+									<Events>
+										<Event name="OnChange">ОнлайнОбменДаннымиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ИнтервалОбмена" id="4">
+									<DataPath>НаборКонстант.ИнтервалОбмена</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Интервал обмена данными (мин.)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:AccentColor</TitleTextColor>
+									<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<ContextMenu name="ИнтервалОбменаКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ИнтервалОбменаРасширеннаяПодсказка" id="6"/>
+								</InputField>
+								<InputField name="ИнтервалПолученияОстатковТМЦ" id="53">
+									<DataPath>НаборКонстант.ИнтервалПолученияОстатковТМЦ</DataPath>
+									<TitleTextColor>style:AccentColor</TitleTextColor>
+									<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<ContextMenu name="ИнтервалПолученияОстатковТМЦКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ИнтервалПолученияОстатковТМЦРасширеннаяПодсказка" id="55"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="НастройкиHTTPПодключения" id="43">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.НастройкиHTTPПодключения</CommandName>
+							<TextColor>style:AccentColor</TextColor>
+							<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="НастройкиHTTPПодключенияРасширеннаяПодсказка" id="44"/>
+						</Button>
+						<Button name="Регистрация" id="49">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.Регистрация</CommandName>
+							<TextColor>style:AccentColor</TextColor>
+							<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрация/Перерегистрация</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="РегистрацияРасширеннаяПодсказка" id="50"/>
+						</Button>
+						<Button name="СписокОбновлений" id="56">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.СписокОбновлений</CommandName>
+							<TextColor>style:AccentColor</TextColor>
+							<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список обновлений</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СписокОбновленийРасширеннаяПодсказка" id="57"/>
+						</Button>
+						<Button name="ВыборГруппыСкадовДляОбменаДанными" id="51">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ВыборГруппыСкадовДляОбменаДанными</CommandName>
+							<TextColor>style:AccentColor</TextColor>
+							<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="ВыборГруппыСкадовДляОбменаДаннымиРасширеннаяПодсказка" id="52"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="СтильОформления" id="58">
+			<DataPath>НаборКонстант.СтильОформления</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор стиля оформления приложения</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена стиля оформления программы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceButton>true</ChoiceButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Античный</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Белый</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Зеленый</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">2</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Инфостарт</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">3</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Классический</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">4</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Красный</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">5</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Малиновый</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">6</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Молодежный</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">7</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Нежный</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">8</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Розовый</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">9</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Серый</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">10</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Синий</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">11</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Телеграм</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">12</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Фиолетовый</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">13</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Черный</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">14</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Мобильный</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">15</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<Font ref="style:NormalTextFont" height="10" kind="StyleItem" scale="100"/>
+			<ContextMenu name="СтильОформленияКонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="СтильОформленияРасширеннаяПодсказка" id="60"/>
+			<Events>
+				<Event name="OnChange">СтильОформленияПриИзменении</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастройкиHTTPПодключения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки HTTPПодключения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки HTTPПодключения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиHTTPПодключения</Action>
+		</Command>
+		<Command name="Регистрация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Регистрация</Action>
+		</Command>
+		<Command name="ВыборГруппыСкадовДляОбменаДанными" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор группы скадов для обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор группы скадов для обмена данными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыборГруппыСкадовДляОбменаДанными</Action>
+		</Command>
+		<Command name="СписокОбновлений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список обновлений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список обновлений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокОбновлений</Action>
+		</Command>
+	</Commands>
+</Form>

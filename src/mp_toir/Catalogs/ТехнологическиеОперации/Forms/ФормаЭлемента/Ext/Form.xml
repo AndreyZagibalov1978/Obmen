@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Мечел_СпособВыполнения" id="4">
+			<DataPath>Объект.Мечел_СпособВыполнения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="Мечел_СпособВыполненияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="Мечел_СпособВыполненияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ВремяШтучное" id="7">
+			<DataPath>Объект.ВремяШтучное</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВремяШтучноеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВремяШтучноеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВремяПЗ" id="10">
+			<DataPath>Объект.ВремяПЗ</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВремяПЗКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВремяПЗРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<CheckBoxField name="МожноПовторить" id="13">
+			<DataPath>Объект.МожноПовторить</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="МожноПовторитьКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="МожноПовторитьРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<CheckBoxField name="МожноПропустить" id="16">
+			<DataPath>Объект.МожноПропустить</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="МожноПропуститьКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="МожноПропуститьРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
+		<CheckBoxField name="Мечел_ФотоотчетОбязателен" id="19">
+			<DataPath>Объект.Мечел_ФотоотчетОбязателен</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="Мечел_ФотоотчетОбязателенКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="Мечел_ФотоотчетОбязателенРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<CheckBoxField name="мп_ПроверкаОбязательна" id="22">
+			<DataPath>Объект.мп_ПроверкаОбязательна</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="мп_ПроверкаОбязательнаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="мп_ПроверкаОбязательнаРасширеннаяПодсказка" id="24"/>
+		</CheckBoxField>
+		<CheckBoxField name="Мечел_ИзмерениеОбязательно" id="25">
+			<DataPath>Объект.Мечел_ИзмерениеОбязательно</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="Мечел_ИзмерениеОбязательноКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="Мечел_ИзмерениеОбязательноРасширеннаяПодсказка" id="27"/>
+		</CheckBoxField>
+		<InputField name="мп_ПоказательИзмерения" id="28">
+			<DataPath>Объект.мп_ПоказательИзмерения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="мп_ПоказательИзмеренияКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="мп_ПоказательИзмеренияРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="мп_ВидПроверки" id="31">
+			<DataPath>Объект.мп_ВидПроверки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="мп_ВидПроверкиКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="мп_ВидПроверкиРасширеннаяПодсказка" id="33"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТехнологическиеОперации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

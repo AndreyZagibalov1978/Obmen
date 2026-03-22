@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Enum uuid="1c5ea3fb-658a-4623-97b4-aabcf1a53994">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.Мечел_ТипПричины" category="Ref">
+				<xr:TypeId>183cc5ef-f35c-4dc6-be60-9a31a9ee2282</xr:TypeId>
+				<xr:ValueId>78a0b3b0-cb0e-4397-944b-85d1cb21ae45</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.Мечел_ТипПричины" category="Manager">
+				<xr:TypeId>850a1d30-5122-4549-ac7d-01c4fbfa10bb</xr:TypeId>
+				<xr:ValueId>1381ba83-3b6a-43eb-bb4c-85567511cc69</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.Мечел_ТипПричины" category="List">
+				<xr:TypeId>2b61badc-ceed-40e4-bcfd-bbf5b94f6d2a</xr:TypeId>
+				<xr:ValueId>45272466-0a34-4295-ad13-31c1412f5f70</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Мечел_ТипПричины</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мечел: Тип причины</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="5d7fe33c-4527-4aba-9950-89e666b7287f">
+				<Properties>
+					<Name>ОтменаЗаказаНаРемонт</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена заказа на ремонт</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0f688c93-114b-4cfe-a86b-83f1348834af">
+				<Properties>
+					<Name>ПереносСроковЗаказаНаРемонт</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перенос сроков заказа на ремонт</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="91fb05c9-26d6-4261-a9ac-af8fc946c608">
+				<Properties>
+					<Name>ОтменаРаботУзлаРемонта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена работ узла ремонта</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="91d73dee-e362-4040-9c40-ed5848dbd6d5">
+				<Properties>
+					<Name>ДобавлениеРаботУзлаРемонта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавление работ узла ремонта</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

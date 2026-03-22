@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowTitle>false</ShowTitle>
+	<ShowCloseButton>false</ShowCloseButton>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаИнформация" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа информация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<LabelField name="КачествоСвязи" id="58">
+					<DataPath>ТекущийСклад</DataPath>
+					<TitleFont ref="style:NormalTextFont" height="8" kind="StyleItem" scale="100"/>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="КачествоСвязиКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="КачествоСвязиРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="ДатаСборкиПриложения" id="43">
+					<DataPath>ТекущийСклад</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сборка МП ТОиР: 20.03.2026</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="8" kind="StyleItem" scale="100"/>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДатаСборкиПриложенияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДатаСборкиПриложенияРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="СтатусОбновленияОстатковТМЦ" id="55">
+					<DataPath>СтатусОбновленияНоменклатуры</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизация остатков ТМЦ не производилась</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СтатусОбновленияОстатковТМЦКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="СтатусОбновленияОстатковТМЦРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="СтатусОбновленияДокументов" id="52">
+					<DataPath>СтатусОбновленияНоменклатуры</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизация документов не производилась</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СтатусОбновленияДокументовКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СтатусОбновленияДокументовРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="СтатусОбновленияНоменклатуры" id="29">
+					<DataPath>СтатусОбновленияНоменклатуры</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идет процесс обновления номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СтатусОбновленияНоменклатурыКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СтатусОбновленияНоменклатурыРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<LabelField name="ТекущийСклад" id="38">
+					<DataPath>ТекущийСклад</DataPath>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ТекущийСкладКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТекущийСкладРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКнопки" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<Button name="РегистрацияДефектов" id="34">
+					<Type>UsualButton</Type>
+					<TitleHeight>2</TitleHeight>
+					<Width>18</Width>
+					<Height>2</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.РегистрацияДефектов</CommandName>
+					<TextColor>style:FieldTextColor</TextColor>
+					<BackColor>style:ActivityColor</BackColor>
+					<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ExtendedTooltip name="РегистрацияДефектовРасширеннаяПодсказка" id="35"/>
+				</Button>
+				<Button name="РегистрацияПроверокОборудования" id="24">
+					<Type>UsualButton</Type>
+					<TitleHeight>2</TitleHeight>
+					<Width>18</Width>
+					<Height>2</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.РегистрацияПроверокОборудования</CommandName>
+					<TextColor>style:FieldTextColor</TextColor>
+					<BackColor>style:ActivityColor</BackColor>
+					<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ExtendedTooltip name="РегистрацияПроверокОборудованияРасширеннаяПодсказка" id="25"/>
+				</Button>
+				<Button name="НаработкиЭксплуатации" id="22">
+					<Type>UsualButton</Type>
+					<TitleHeight>2</TitleHeight>
+					<DefaultItem>true</DefaultItem>
+					<Width>18</Width>
+					<Height>2</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.НаработкиЭксплуатации</CommandName>
+					<TextColor>style:FormTextColor</TextColor>
+					<BackColor>style:ActivityColor</BackColor>
+					<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<ExtendedTooltip name="НаработкиЭксплуатацииРасширеннаяПодсказка" id="23"/>
+				</Button>
+				<Button name="ЗаданиеНаРемонт" id="41">
+					<Type>UsualButton</Type>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.мп_БригадирТОиР">false</xr:Value>
+						<xr:Value name="Role.мп_ДобавлениеИзменениеДокументовТОиР">false</xr:Value>
+						<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+						<xr:Value name="Role.мп_ПросмотрДокументовТОиР">true</xr:Value>
+						<xr:Value name="Role.мп_ОбщиеПрава">false</xr:Value>
+					</UserVisible>
+					<TitleHeight>2</TitleHeight>
+					<Width>18</Width>
+					<Height>2</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.ЗаданиеНаРемонт</CommandName>
+					<TextColor>style:FormTextColor</TextColor>
+					<BackColor>style:ActivityColor</BackColor>
+					<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<ExtendedTooltip name="ЗаданиеНаРемонтРасширеннаяПодсказка" id="42"/>
+				</Button>
+				<Button name="НарядНаРемонт" id="48">
+					<Type>UsualButton</Type>
+					<TitleHeight>2</TitleHeight>
+					<Width>18</Width>
+					<Height>2</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.НарядНаРемонт</CommandName>
+					<TextColor>style:FormTextColor</TextColor>
+					<BackColor>style:ActivityColor</BackColor>
+					<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<ExtendedTooltip name="НарядНаРемонтРасширеннаяПодсказка" id="49"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманды" id="4">
+			<Height>8</Height>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<GroupVerticalAlign>Center</GroupVerticalAlign>
+			<Group>Vertical</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОсновное" id="16">
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<Button name="Синхронизация" id="6">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.Синхронизация</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Синхронизация</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+							<ExtendedTooltip name="СинхронизацияРасширеннаяПодсказка" id="7"/>
+						</Button>
+						<Button name="ОбновитьДанные" id="32">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<Width>5</Width>
+							<Height>3</Height>
+							<CommandName>Form.Command.ОбновитьДанные</CommandName>
+							<BorderColor>style:TableHeaderTextColor</BorderColor>
+							<Picture>
+								<xr:Ref>CommonPicture.ОбновлениеДанных</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОбновитьДанныеРасширеннаяПодсказка" id="33"/>
+						</Button>
+						<Button name="Настройки" id="20">
+							<Type>UsualButton</Type>
+							<UserVisible>
+								<xr:Common>true</xr:Common>
+								<xr:Value name="Role.мп_АдминистрированиеТОиР">true</xr:Value>
+								<xr:Value name="Role.мп_БригадирТОиР">true</xr:Value>
+								<xr:Value name="Role.мп_ДобавлениеИзменениеДокументовТОиР">true</xr:Value>
+								<xr:Value name="Role.мп_ПросмотрДокументовТОиР">true</xr:Value>
+								<xr:Value name="Role.мп_ОбщиеПрава">true</xr:Value>
+							</UserVisible>
+							<Representation>Picture</Representation>
+							<Width>5</Width>
+							<Height>3</Height>
+							<CommandName>Form.Command.Настройки</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Настройки</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="21"/>
+						</Button>
+						<Button name="Выход" id="8">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<Width>5</Width>
+							<Height>3</Height>
+							<CommandName>Form.Command.Выход</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Выход</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ВыходРасширеннаяПодсказка" id="9"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="ПравилоОбмена" id="36">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПравилоОбмена</CommandName>
+			<ExtendedTooltip name="ПравилоОбменаРасширеннаяПодсказка" id="37"/>
+		</Button>
+		<LabelField name="ПользовательИБ" id="26">
+			<DataPath>ПользовательИБ</DataPath>
+			<ContextMenu name="ПользовательИБКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ПользовательИБРасширеннаяПодсказка" id="28"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РабочийСтол</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТабличныйДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусОбновленияНоменклатуры" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус обновления номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СлужебныйПользователь" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебный пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийСклад" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаборКонстант" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Синхронизация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Синхронизация</Action>
+		</Command>
+		<Command name="Выход" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выход</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выход</Action>
+		</Command>
+		<Command name="Настройки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Настройки</Action>
+		</Command>
+		<Command name="НаработкиЭксплуатации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатели работы оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наработки эксплуатации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НаработкиЭксплуатации</Action>
+		</Command>
+		<Command name="РегистрацияПроверокОборудования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация проверок оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наработки эксплуатации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РегистрацияПроверокОборудования</Action>
+		</Command>
+		<Command name="ОбновитьДанные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьДанные</Action>
+		</Command>
+		<Command name="РегистрацияДефектов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация дефектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация дефектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РегистрацияДефектов</Action>
+		</Command>
+		<Command name="ПравилоОбмена" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правило обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правило обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПравилоОбмена</Action>
+		</Command>
+		<Command name="ЗаданиеНаРемонт" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание на ремонт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание на ремонт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаданиеНаРемонт</Action>
+		</Command>
+		<Command name="НарядНаРемонт" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наряд на ремонт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наряд на ремонт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НарядНаРемонт</Action>
+		</Command>
+	</Commands>
+</Form>

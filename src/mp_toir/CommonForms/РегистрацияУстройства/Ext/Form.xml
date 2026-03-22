@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Регистрация</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="13">
+			<TitleFont ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="СтраницаРегистрация" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница регистрация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРегистрацияРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<InputField name="Информация" id="1">
+							<DataPath>Информация</DataPath>
+							<TitleTextColor>style:AccentColor</TitleTextColor>
+							<HorizontalStretch>true</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ИнформацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<Button name="ПроверкаСвязиАПИ" id="25">
+							<Type>UsualButton</Type>
+							<HorizontalStretch>true</HorizontalStretch>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<CommandName>Form.Command.ПроверкаСвязиАПИ</CommandName>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="ПроверкаСвязиАПИРасширеннаяПодсказка" id="26"/>
+						</Button>
+						<Button name="ПроверкаСвязи" id="8">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<CommandName>Form.Command.ПроверкаСвязи</CommandName>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ExtendedTooltip name="ПроверкаСвязиРасширеннаяПодсказка" id="9"/>
+						</Button>
+						<Button name="Регистрация" id="4">
+							<Type>UsualButton</Type>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<CommandName>Form.Command.Регистрация</CommandName>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрация</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="РегистрацияРасширеннаяПодсказка" id="5"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОписание" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание команд</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОписаниеРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОписание" id="10">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;fontsize 10&gt;&lt;colorstyle -46&gt;Команда "&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;colorstyle -46&gt;Проверка связи&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -46&gt;" - &lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;&lt;colorstyle -46&gt;проверяет связь с центральной базой. В случае успеха будет выдано сообщение вида: "&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;colorstyle -46&gt;Проверка связи завершилось успешно&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -46&gt;".&lt;/&gt;&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;colorstyle -46&gt;Команда "&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;colorstyle -46&gt;Регистрация&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -46&gt;" - &lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;&lt;colorstyle -46&gt;при &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;colorstyle -46&gt;регистрации&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -46&gt; устройства происходит подключение к базе данных и получение первичной информации [пользователи, склады, номенклатура, данные маркировки])&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;&lt;colorstyle -46&gt;После получения данных, программа предложит выбрать группу складов для обмена информацией. После выбора будет перезапущена.&lt;/&gt;&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;b&gt;&lt;colorstyle -46&gt;"Повторная регистрация"&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -46&gt; - сбрасывает устройство и получает первичную информацию заново.&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОписаниеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ДекорацияОписаниеРасширеннаяПодсказка" id="12"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Информация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Регистрация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Регистрация</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверкаСвязи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка связи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка связи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаСвязи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверкаСвязиАПИ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка связи АПИ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка связи АПИ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаСвязиАПИ</Action>
+		</Command>
+		<Command name="СписокОбновлений" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список обновлений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список обновлений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокОбновлений</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>CommonCommand.ЖурналРезультатов</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

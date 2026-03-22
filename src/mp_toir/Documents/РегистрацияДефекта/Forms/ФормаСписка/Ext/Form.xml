@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтбор" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="71"/>
+			<ChildItems>
+				<InputField name="ОтветственныйОтбор" id="75">
+					<DataPath>Ответственный</DataPath>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОтветственныйОтборКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ОтветственныйОтборРасширеннаяПодсказка" id="77"/>
+					<Events>
+						<Event name="OnChange">ОтветственныйОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОбъектЭксплуатацииОтбор" id="98">
+					<DataPath>ОбъектЭксплуатации</DataPath>
+					<MultiLine>true</MultiLine>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<QuickChoice>false</QuickChoice>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ОбъектЭксплуатацииОтборКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="ОбъектЭксплуатацииОтборРасширеннаяПодсказка" id="100"/>
+					<Events>
+						<Event name="OnChange">ОбъектЭксплуатацииОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СтатусОбменаОтбор" id="101">
+					<DataPath>СтатусОбмена</DataPath>
+					<MultiLine>true</MultiLine>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ShowCheckBoxesInDropList>true</ShowCheckBoxesInDropList>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="СтатусОбменаОтборКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="СтатусОбменаОтборРасширеннаяПодсказка" id="103"/>
+					<Events>
+						<Event name="StartChoice">СтатусОбменаОтборНачалоВыбора</Event>
+						<Event name="MultipleValuesDelete">СтатусОбменаОтборУдалениеМножественныхЗначений</Event>
+					</Events>
+				</InputField>
+				<InputField name="СтатусОтбор" id="106">
+					<DataPath>Статус</DataPath>
+					<MultiLine>true</MultiLine>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="СтатусОтборКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="СтатусОтборРасширеннаяПодсказка" id="108"/>
+					<Events>
+						<Event name="StartChoice">СтатусОтборНачалоВыбора</Event>
+						<Event name="MultipleValuesDelete">СтатусОтборУдалениеМножественныхЗначений</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтветственныйЗаУстранениеОтбор" id="84">
+					<DataPath>ОтветственныйЗаУстранение</DataPath>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.мп_ДобавлениеИзменениеДокументовТОиР">false</xr:Value>
+						<xr:Value name="Role.мп_ОбщиеПрава">false</xr:Value>
+					</UserVisible>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<QuickChoice>true</QuickChoice>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ОтветственныйЗаУстранениеОтборКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ОтветственныйЗаУстранениеОтборРасширеннаяПодсказка" id="86"/>
+					<Events>
+						<Event name="OnChange">ОтветственныйЗаУстранениеОтборПриИзменении</Event>
+						<Event name="StartChoice">ОтветственныйЗаУстранениеОтборНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПодразделениеОтбор" id="72">
+					<DataPath>Подразделение</DataPath>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<AutoShowClearButtonMode>Always</AutoShowClearButtonMode>
+					<ContextMenu name="ПодразделениеОтборКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ПодразделениеОтборРасширеннаяПодсказка" id="74"/>
+					<Events>
+						<Event name="OnChange">ПодразделениеОтборПриИзменении</Event>
+						<Event name="StartChoice">ПодразделениеОтборНачалоВыбора</Event>
+						<Event name="Clearing">ПодразделениеОтборОчистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="НомерКИСОтбор" id="81">
+					<DataPath>НомерКИСОтбор</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ChoiceForm>Document.РегистрацияДефекта.Form.ФормаВыбора</ChoiceForm>
+					<ContextMenu name="НомерКИСОтборКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="НомерКИСОтборРасширеннаяПодсказка" id="83"/>
+					<Events>
+						<Event name="OnChange">НомерКИСОтборПриИзменении</Event>
+						<Event name="StartChoice">НомерКИСОтборНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКнопкиСписка" id="104">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки списка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки списка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиСпискаРасширеннаяПодсказка" id="105"/>
+			<ChildItems>
+				<Button name="ФормаСоздать" id="54">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Create</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="55"/>
+				</Button>
+				<Button name="УстановитьИнтервал" id="96">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Item.Список.StandardCommand.SetDateInterval</CommandName>
+					<ExtendedTooltip name="УстановитьИнтервалРасширеннаяПодсказка" id="97"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="3" DisplayImportance="High">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<BorderColor>web:Black</BorderColor>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>1:02023637-7868-4a5f-8576-835a76e0c9ba</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокКонтекстноеМенюУстановитьИнтервал" id="58">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.SetDateInterval</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюУстановитьИнтервалРасширеннаяПодсказка" id="59"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюСоздать" id="60">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюСоздатьРасширеннаяПодсказка" id="61"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюСкопировать" id="62">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюСкопироватьРасширеннаяПодсказка" id="63"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюПровестиДокумент" id="90">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПровестиДокумент</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюПровестиДокументРасширеннаяПодсказка" id="91"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюОтменитьПроведениеДокумента" id="92">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтменитьПроведениеДокумента</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюОтменитьПроведениеДокументаРасширеннаяПодсказка" id="93"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюУстановитьПометкуУдаленияДокумента" id="94">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьПометкуУдаленияДокумента</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюУстановитьПометкуУдаленияДокументаРасширеннаяПодсказка" id="95"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<ColumnGroup name="ГруппаКолонка1" id="46">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа колонка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКолонка1РасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<ColumnGroup name="Группа1" id="56">
+							<Group>InCell</Group>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<LabelField name="Дата" id="16">
+									<DataPath>Список.Дата</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
+								</LabelField>
+								<LabelField name="Номер" id="19">
+									<DataPath>Список.Номер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
+								</LabelField>
+								<LabelField name="НомерКИС" id="78">
+									<DataPath>Список.НомерКИС</DataPath>
+									<ContextMenu name="НомерКИСКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="НомерКИСРасширеннаяПодсказка" id="80"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="СтатусОбмена" id="25">
+							<DataPath>Список.СтатусОбмена</DataPath>
+							<ContextMenu name="СтатусОбменаКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="СтатусОбменаРасширеннаяПодсказка" id="27"/>
+						</LabelField>
+						<LabelField name="Статус" id="22">
+							<DataPath>Список.Статус</DataPath>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<InputField name="ОбъектЭксплуатации" id="28">
+							<DataPath>Список.ОбъектЭксплуатации</DataPath>
+							<MultiLine>true</MultiLine>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОбъектЭксплуатацииКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ОбъектЭксплуатацииРасширеннаяПодсказка" id="30"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаПодрОтв" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подр отв</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подр отв</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПодрОтвРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<LabelField name="Подразделение" id="37">
+							<DataPath>Список.Подразделение</DataPath>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="39"/>
+						</LabelField>
+						<LabelField name="Ответственный" id="43">
+							<DataPath>Список.Ответственный</DataPath>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="45"/>
+						</LabelField>
+						<LabelField name="ОтветственныйЗаУстранение" id="87">
+							<DataPath>Список.ОтветственныйЗаУстранение</DataPath>
+							<ContextMenu name="ОтветственныйЗаУстранениеКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ОтветственныйЗаУстранениеРасширеннаяПодсказка" id="89"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументРегистрацияДефекта.Ссылка КАК Ссылка,
+	ДокументРегистрацияДефекта.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументРегистрацияДефекта.Номер КАК Номер,
+	ДокументРегистрацияДефекта.Дата КАК Дата,
+	ДокументРегистрацияДефекта.Проведен КАК Проведен,
+	ДокументРегистрацияДефекта.Статус КАК Статус,
+	ДокументРегистрацияДефекта.Источник КАК Источник,
+	ДокументРегистрацияДефекта.СтатусОбмена КАК СтатусОбмена,
+	ДокументРегистрацияДефекта.ОбъектЭксплуатации КАК ОбъектЭксплуатации,
+	ДокументРегистрацияДефекта.Организация КАК Организация,
+	ДокументРегистрацияДефекта.КраткоеОписаниеДефекта КАК КраткоеОписаниеДефекта,
+	ДокументРегистрацияДефекта.СпособУстранения КАК СпособУстранения,
+	ДокументРегистрацияДефекта.ВидДефекта КАК ВидДефекта,
+	ДокументРегистрацияДефекта.Подразделение КАК Подразделение,
+	ДокументРегистрацияДефекта.Критичность КАК Критичность,
+	ДокументРегистрацияДефекта.Ответственный КАК Ответственный,
+	ДокументРегистрацияДефекта.ОтветственныйЗаУстранение КАК ОтветственныйЗаУстранение,
+	ДокументРегистрацияДефекта.Комментарий КАК Комментарий,
+	ДокументРегистрацияДефекта.Дефекты.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Узел КАК Узел,
+		Дефект КАК Дефект,
+		СпособУстранения КАК СпособУстранения,
+		ДефектУстранен КАК ДефектУстранен,
+		ДатаУстранения КАК ДатаУстранения,
+		ОписаниеУстранения КАК ОписаниеУстранения,
+		ИдентификаторСтроки КАК ИдентификаторСтроки
+	) КАК Дефекты,
+	ДокументРегистрацияДефекта.ФиксацияДефекта.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ИдентификаторСтрокиДефекта КАК ИдентификаторСтрокиДефекта,
+		ИдентификаторСтрокиФиксацииДефекта КАК ИдентификаторСтрокиФиксацииДефекта,
+		ФотоДефекта КАК ФотоДефекта,
+		ФотоДефектаПредставление КАК ФотоДефектаПредставление,
+		ИмяФайла КАК ИмяФайла,
+		РасширениеФайла КАК РасширениеФайла
+	) КАК ФиксацияДефекта,
+	ДокументРегистрацияДефекта.ФиксацияУстранения.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ИдентификаторСтрокиДефекта КАК ИдентификаторСтрокиДефекта,
+		ИдентификаторСтрокиУстраненияДефекта КАК ИдентификаторСтрокиУстраненияДефекта,
+		ФотоУстранения КАК ФотоУстранения,
+		ФотоУстраненияПредставление КАК ФотоУстраненияПредставление,
+		ИмяФайла КАК ИмяФайла,
+		РасширениеФайла КАК РасширениеФайла
+	) КАК ФиксацияУстранения,
+	ДокументРегистрацияДефекта.МоментВремени КАК МоментВремени,
+	ДокументРегистрацияДефекта.НомерКИС КАК НомерКИС
+ИЗ
+	Документ.РегистрацияДефекта КАК ДокументРегистрацияДефекта
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;Подразделение = ЗНАЧЕНИЕ(Справочник.СтруктураПредприятия.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ДокументРегистрацияДефекта.Подразделение = &amp;Подразделение
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ТекущийПользовательБригадир
+				ТОГДА ДокументРегистрацияДефекта.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+						ИЛИ ДокументРегистрацияДефекта.Ответственный = &amp;Ответственный
+			КОГДА &amp;Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ДокументРегистрацияДефекта.Ответственный = &amp;Ответственный
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;НомерКИС = ЗНАЧЕНИЕ(Документ.РегистрацияДефекта.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ДокументРегистрацияДефекта.Ссылка = &amp;НомерКИС
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ОтветственныйЗаУстранение = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ДокументРегистрацияДефекта.ОтветственныйЗаУстранение = &amp;ОтветственныйЗаУстранение
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ОбъектЭксплуатации = ЗНАЧЕНИЕ(Справочник.ОбъектыЭксплуатации.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ДокументРегистрацияДефекта.ОбъектЭксплуатации = &amp;ОбъектЭксплуатации
+		КОНЕЦ
+	И ДокументРегистрацияДефекта.СтатусОбмена В(&amp;СтатусыОбмена)
+	И ДокументРегистрацияДефекта.Статус В(&amp;СтатусыДефектов)</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияУстранения.ИмяФайла</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения.ИмяФайла</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.Дефект</dcssch:dataPath>
+					<dcssch:field>Дефекты.Дефект</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Статус</dcssch:dataPath>
+					<dcssch:field>Статус</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияУстранения.ИдентификаторСтрокиДефекта</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения.ИдентификаторСтрокиДефекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.СпособУстранения</dcssch:dataPath>
+					<dcssch:field>Дефекты.СпособУстранения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияУстранения.Ссылка</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения.Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Проведен</dcssch:dataPath>
+					<dcssch:field>Проведен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.ОписаниеУстранения</dcssch:dataPath>
+					<dcssch:field>Дефекты.ОписаниеУстранения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияДефекта.ФотоДефектаПредставление</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта.ФотоДефектаПредставление</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбъектЭксплуатации</dcssch:dataPath>
+					<dcssch:field>ОбъектЭксплуатации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Источник</dcssch:dataPath>
+					<dcssch:field>Источник</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатусОбмена</dcssch:dataPath>
+					<dcssch:field>СтатусОбмена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КраткоеОписаниеДефекта</dcssch:dataPath>
+					<dcssch:field>КраткоеОписаниеДефекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СпособУстранения</dcssch:dataPath>
+					<dcssch:field>СпособУстранения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияДефекта.ИдентификаторСтрокиФиксацииДефекта</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта.ИдентификаторСтрокиФиксацииДефекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДефекта</dcssch:dataPath>
+					<dcssch:field>ВидДефекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделение</dcssch:dataPath>
+					<dcssch:field>Подразделение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияДефекта.Ссылка</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта.Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Критичность</dcssch:dataPath>
+					<dcssch:field>Критичность</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияДефекта.НомерСтроки</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта.НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ответственный</dcssch:dataPath>
+					<dcssch:field>Ответственный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.Ссылка</dcssch:dataPath>
+					<dcssch:field>Дефекты.Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.НомерСтроки</dcssch:dataPath>
+					<dcssch:field>Дефекты.НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.Узел</dcssch:dataPath>
+					<dcssch:field>Дефекты.Узел</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.ДефектУстранен</dcssch:dataPath>
+					<dcssch:field>Дефекты.ДефектУстранен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.ДатаУстранения</dcssch:dataPath>
+					<dcssch:field>Дефекты.ДатаУстранения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дефекты.ИдентификаторСтроки</dcssch:dataPath>
+					<dcssch:field>Дефекты.ИдентификаторСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>Дефекты</dcssch:dataPath>
+					<dcssch:field>Дефекты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияДефекта.ИдентификаторСтрокиДефекта</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта.ИдентификаторСтрокиДефекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияДефекта.ФотоДефекта</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта.ФотоДефекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияДефекта.ИмяФайла</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта.ИмяФайла</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияДефекта.РасширениеФайла</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта.РасширениеФайла</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>ФиксацияДефекта</dcssch:dataPath>
+					<dcssch:field>ФиксацияДефекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияУстранения.НомерСтроки</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения.НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияУстранения.ИдентификаторСтрокиУстраненияДефекта</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения.ИдентификаторСтрокиУстраненияДефекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияУстранения.ФотоУстранения</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения.ФотоУстранения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияУстранения.ФотоУстраненияПредставление</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения.ФотоУстраненияПредставление</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияУстранения.РасширениеФайла</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения.РасширениеФайла</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>ФиксацияУстранения</dcssch:dataPath>
+					<dcssch:field>ФиксацияУстранения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
+					<dcssch:field>МоментВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерКИС</dcssch:dataPath>
+					<dcssch:field>НомерКИС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВерсияДанныхЕРП</dcssch:dataPath>
+					<dcssch:field>ВерсияДанныхЕРП</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтветственныйЗаУстранение</dcssch:dataPath>
+					<dcssch:field>ОтветственныйЗаУстранение</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>Ответственный</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>Подразделение</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>НомерКИС</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер КИС</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:DocumentRef.РегистрацияДефекта</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ОтветственныйЗаУстранение</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный за устранение</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ОбъектЭксплуатации</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект эксплуатации</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.ОбъектыЭксплуатации</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>СтатусыОбмена</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статусы обмена</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:EnumRef.мп_СтатусыОбмена</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ТекущийПользовательБригадир</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий пользователь бригадир</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:boolean">false</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>СтатусыДефектов</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статусы дефектов</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:EnumRef.СтатусыДефектов</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<MainTable>Document.РегистрацияДефекта</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Ответственный" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Подразделение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерКИСОтбор" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер КИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.РегистрацияДефекта</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтветственныйЗаУстранение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный за устранение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектЭксплуатации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект эксплуатации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОбъектыЭксплуатации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусОбмена" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Статус" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПраваДоступаТекущегоПользователя" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа текущего пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПровестиДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПровестиДокумент</Action>
+		</Command>
+		<Command name="ОтменитьПроведениеДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить проведение</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменитьПроведениеДокумента</Action>
+		</Command>
+		<Command name="УстановитьПометкуУдаленияДокумента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление / Снять пометку</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПометкуУдаленияДокумента</Action>
+		</Command>
+	</Commands>
+</Form>

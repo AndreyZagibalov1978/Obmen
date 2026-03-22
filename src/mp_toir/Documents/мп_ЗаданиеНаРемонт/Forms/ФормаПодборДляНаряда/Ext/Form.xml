@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВыбрать" id="36">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Выбрать</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="37"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтбор" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="Подразделение" id="24">
+					<DataPath>Подразделение</DataPath>
+					<MultiLine>true</MultiLine>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<QuickChoice>false</QuickChoice>
+					<ChooseType>false</ChooseType>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="26"/>
+					<Events>
+						<Event name="OnChange">ПодразделениеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОбъектЭксплуатации" id="27">
+					<DataPath>ОбъектЭксплуатации</DataPath>
+					<MultiLine>true</MultiLine>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<QuickChoice>false</QuickChoice>
+					<ChooseType>false</ChooseType>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ОбъектЭксплуатацииКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ОбъектЭксплуатацииРасширеннаяПодсказка" id="29"/>
+					<Events>
+						<Event name="OnChange">ОбъектЭксплуатацииПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Ответственный" id="30">
+					<DataPath>Ответственный</DataPath>
+					<MultiLine>true</MultiLine>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="32"/>
+					<Events>
+						<Event name="OnChange">ОтветственныйПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПлановаяДата" id="33">
+					<DataPath>ПлановаяДата</DataPath>
+					<ClearButton>true</ClearButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="ПлановаяДатаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ПлановаяДатаРасширеннаяПодсказка" id="35"/>
+					<Events>
+						<Event name="OnChange">ПлановаяДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<MultipleChoice>true</MultipleChoice>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<Enabled>false</Enabled>
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<Enabled>false</Enabled>
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<Enabled>false</Enabled>
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<ColumnGroup name="ГруппаВертикально" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертикально</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертикально</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВертикальноРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<ColumnGroup name="ГруппаДатаНомер" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="39"/>
+							<ChildItems>
+								<LabelField name="Дата" id="16">
+									<DataPath>Список.Дата</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
+								</LabelField>
+								<LabelField name="Номер" id="19">
+									<DataPath>Список.Номер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
+								</LabelField>
+								<LabelField name="СтатусОбмена" id="40">
+									<DataPath>Список.СтатусОбмена</DataPath>
+									<ContextMenu name="СтатусОбменаКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="СтатусОбменаРасширеннаяПодсказка" id="42"/>
+								</LabelField>
+								<LabelField name="ВыполнениеОперации" id="43">
+									<DataPath>Список.ВыполнениеОперации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вып. операции</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВыполнениеОперацииКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ВыполнениеОперацииРасширеннаяПодсказка" id="45"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="ОбъектЭксплуатацииСписок" id="46">
+							<DataPath>Список.ОбъектЭксплуатации</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Объект эксплуатации</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОбъектЭксплуатацииСписокКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ОбъектЭксплуатацииСписокРасширеннаяПодсказка" id="48"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	мп_ЗаданиеНаРемонт.Номер КАК Номер,
+	мп_ЗаданиеНаРемонт.Ссылка КАК Ссылка,
+	мп_ЗаданиеНаРемонт.Подразделение КАК Подразделение,
+	мп_ЗаданиеНаРемонт.ДатаИзмеренияПроверкиВыполнения КАК ДатаИзмеренияПроверкиВыполнения,
+	мп_ЗаданиеНаРемонт.Ответственный КАК Ответственный,
+	мп_ЗаданиеНаРемонт.ОбъектЭксплуатации КАК ОбъектЭксплуатации,
+	мп_ЗаданиеНаРемонт.ВыполнениеОперации КАК ВыполнениеОперации,
+	мп_ЗаданиеНаРемонт.СтатусОбмена КАК СтатусОбмена,
+	мп_ЗаданиеНаРемонт.Дата КАК Дата
+ИЗ
+	Документ.мп_ЗаданиеНаРемонт КАК мп_ЗаданиеНаРемонт
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ПлановаяДата = ДАТАВРЕМЯ(1, 1, 1)
+				ТОГДА ИСТИНА
+			КОГДА НАЧАЛОПЕРИОДА(мп_ЗаданиеНаРемонт.ДатаНачала, ДЕНЬ) &lt;= НАЧАЛОПЕРИОДА(&amp;ПлановаяДата, ДЕНЬ)
+					И НАЧАЛОПЕРИОДА(мп_ЗаданиеНаРемонт.ДатаЗавершения, ДЕНЬ) &gt;= НАЧАЛОПЕРИОДА(&amp;ПлановаяДата, ДЕНЬ)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;Подразделение = ЗНАЧЕНИЕ(Справочник.СтруктураПредприятия.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ мп_ЗаданиеНаРемонт.Подразделение = &amp;Подразделение
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ мп_ЗаданиеНаРемонт.Ответственный = &amp;Ответственный
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ОбъектЭксплуатации = ЗНАЧЕНИЕ(Справочник.ОбъектыЭксплуатации.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ мп_ЗаданиеНаРемонт.ОбъектЭксплуатации = &amp;ОбъектЭксплуатации
+		КОНЕЦ
+	И НЕ мп_ЗаданиеНаРемонт.Ссылка В (&amp;ИсключаемыеДокументы)
+	И НЕ мп_ЗаданиеНаРемонт.ПометкаУдаления</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачала</dcssch:dataPath>
+					<dcssch:field>ДатаНачала</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделение</dcssch:dataPath>
+					<dcssch:field>Подразделение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>МатериалыКСписанию</dcssch:dataPath>
+					<dcssch:field>МатериалыКСписанию</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Проведен</dcssch:dataPath>
+					<dcssch:field>Проведен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТабличнаяЧасть</dcssch:dataPath>
+					<dcssch:field>ТабличнаяЧасть</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаказНаРемонт</dcssch:dataPath>
+					<dcssch:field>ЗаказНаРемонт</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатусОбмена</dcssch:dataPath>
+					<dcssch:field>СтатусОбмена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ответственный</dcssch:dataPath>
+					<dcssch:field>Ответственный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторСтроки</dcssch:dataPath>
+					<dcssch:field>ИдентификаторСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Источник</dcssch:dataPath>
+					<dcssch:field>Источник</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбъектЭксплуатации</dcssch:dataPath>
+					<dcssch:field>ОбъектЭксплуатации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Узел</dcssch:dataPath>
+					<dcssch:field>Узел</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаЗавершения</dcssch:dataPath>
+					<dcssch:field>ДатаЗавершения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеРабот</dcssch:dataPath>
+					<dcssch:field>НаименованиеРабот</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыполнениеОперации</dcssch:dataPath>
+					<dcssch:field>ВыполнениеОперации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПоказательИзмерения</dcssch:dataPath>
+					<dcssch:field>ПоказательИзмерения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗначениеПоказателяИзмерения</dcssch:dataPath>
+					<dcssch:field>ЗначениеПоказателяИзмерения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидПроверки</dcssch:dataPath>
+					<dcssch:field>ВидПроверки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Продолжительность</dcssch:dataPath>
+					<dcssch:field>Продолжительность</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатПроверки</dcssch:dataPath>
+					<dcssch:field>РезультатПроверки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаИзмеренияПроверкиВыполнения</dcssch:dataPath>
+					<dcssch:field>ДатаИзмеренияПроверкиВыполнения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФотоотчетОбязателен</dcssch:dataPath>
+					<dcssch:field>ФотоотчетОбязателен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерКИС</dcssch:dataPath>
+					<dcssch:field>НомерКИС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Трудоёмкость</dcssch:dataPath>
+					<dcssch:field>Трудоёмкость</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбщийВидРемонта</dcssch:dataPath>
+					<dcssch:field>ОбщийВидРемонта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоЧеловек</dcssch:dataPath>
+					<dcssch:field>КоличествоЧеловек</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>Исполнители</dcssch:dataPath>
+					<dcssch:field>Исполнители</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>МатериалыКОприходованию</dcssch:dataPath>
+					<dcssch:field>МатериалыКОприходованию</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>Фотографии</dcssch:dataPath>
+					<dcssch:field>Фотографии</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
+					<dcssch:field>МоментВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидРемонта</dcssch:dataPath>
+					<dcssch:field>ВидРемонта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Исполнитель</dcssch:dataPath>
+					<dcssch:field>Исполнитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТехРешение</dcssch:dataPath>
+					<dcssch:field>ТехРешение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УстановленныеТМЦ</dcssch:dataPath>
+					<dcssch:field>УстановленныеТМЦ</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>ОбъектЭксплуатации</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект эксплуатации</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.ОбъектыЭксплуатации</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>Ответственный</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ПлановаяДата</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановая дата</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>Подразделение</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ИсключаемыеДокументы</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исключаемые документы</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:DocumentRef.мп_ЗаданиеНаРемонт</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<MainTable>Document.мп_ЗаданиеНаРемонт</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Подразделение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Ответственный" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлановаяДата" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Плановая дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектЭксплуатации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект эксплуатации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОбъектыЭксплуатации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СохранитьИзменения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныеДокументы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсключаемыеДокументы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключаемые документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoFillCheck>false</AutoFillCheck>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowCloseButton>false</ShowCloseButton>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОбщаяКомандаВыходИзПриложения" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.ВыходИзПриложения</CommandName>
+				<ExtendedTooltip name="ФормаОбщаяКомандаВыходИзПриложенияРасширеннаяПодсказка" id="10"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Логин" id="1">
+			<DataPath>Логин</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<HorizontalStretch>true</HorizontalStretch>
+			<MultiLine>true</MultiLine>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<CreateButton>false</CreateButton>
+			<QuickChoice>false</QuickChoice>
+			<ChooseType>false</ChooseType>
+			<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="ЛогинКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="StartChoice">ЛогинНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПароль" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пароль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пароль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПарольРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<InputField name="Пароль" id="14">
+					<DataPath>Пароль</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<Wrap>false</Wrap>
+					<PasswordMode>true</PasswordMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<QuickChoice>false</QuickChoice>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ПарольКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<Button name="ПосмотретьПароль" id="25">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<CommandName>Form.Command.ПосмотретьПароль</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ПоказатьПароль22</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<PictureLocation>Right</PictureLocation>
+					<ExtendedTooltip name="ПосмотретьПарольРасширеннаяПодсказка" id="26"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ГруппаСкладовОбменаДанными" id="11">
+			<DataPath>ГруппаСкладовОбменаДанными</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<TitleLocation>Top</TitleLocation>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ChoiceButton>true</ChoiceButton>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<CreateButton>false</CreateButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ChooseType>false</ChooseType>
+			<ChoiceForm>Catalog.Склады.Form.ФормаВыбора</ChoiceForm>
+			<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ContextMenu name="ГруппаСкладовОбменаДаннымиКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ГруппаСкладовОбменаДаннымиРасширеннаяПодсказка" id="13"/>
+		</InputField>
+		<CheckBoxField name="ОбновитьНоменлкатуру" id="17">
+			<DataPath>РаботатьОффлайн</DataPath>
+			<Visible>false</Visible>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбновитьНоменлкатуруКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ОбновитьНоменлкатуруРасширеннаяПодсказка" id="19"/>
+		</CheckBoxField>
+		<LabelField name="ПользовательИБ" id="20">
+			<DataPath>ПользовательИБ</DataPath>
+			<ContextMenu name="ПользовательИБКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="ПользовательИБРасширеннаяПодсказка" id="22"/>
+		</LabelField>
+		<Button name="Авторизация" id="7">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<DefaultItem>true</DefaultItem>
+			<Height>3</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<CommandName>Form.Command.Авторизация</CommandName>
+			<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<Shape>Usual</Shape>
+			<ExtendedTooltip name="АвторизацияРасширеннаяПодсказка" id="8"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Логин" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГруппаСкладовОбменаДанными" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Пароль" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РаботатьОффлайн" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Асинх тест загрузки номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СлужебныйПользователь" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебный пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="глАвторизацияВыполненаРеквизит" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гл авторизация выполнена реквизит</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Авторизация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Авторизация</Action>
+		</Command>
+		<Command name="ПосмотретьПароль" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть пароль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть пароль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПосмотретьПароль</Action>
+		</Command>
+	</Commands>
+</Form>

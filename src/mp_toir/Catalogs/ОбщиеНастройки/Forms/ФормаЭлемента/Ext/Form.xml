@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<CheckBoxField name="ЭтоСписокЗначений" id="7">
+			<DataPath>Объект.ЭтоСписокЗначений</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЭтоСписокЗначенийКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЭтоСписокЗначенийРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+		<InputField name="ТипЗначения" id="10">
+			<DataPath>ТипЗначения</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Значение" id="29">
+			<DataPath>Значение</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЗначениеКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ЗначениеРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<Table name="ЗначенияТЧ" id="13">
+			<Representation>List</Representation>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>ЗначенияТЧ</DataPath>
+			<RowPictureDataPath>ЗначенияТЧ.Picture</RowPictureDataPath>
+			<ContextMenu name="ЗначенияТЧКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="ЗначенияТЧКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="ЗначенияТЧРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="ЗначенияТЧСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>ЗначенияТЧ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗначенияТЧСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ЗначенияТЧСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗначенияТЧСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>ЗначенияТЧ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗначенияТЧСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ЗначенияТЧСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗначенияТЧУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>ЗначенияТЧ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗначенияТЧУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ЗначенияТЧУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ЗначенияТЧЗначение" id="26">
+					<DataPath>ЗначенияТЧ.Value</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗначенияТЧЗначениеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЗначенияТЧЗначениеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ОбщиеНастройки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипЗначения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип значения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:TypeDescription</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Значение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЗначенияТЧ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значения ТЧ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

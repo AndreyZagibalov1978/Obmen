@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаКнопки" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Button name="ПолучитьОбновление" id="44">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<Width>20</Width>
+					<Height>3</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>Form.Command.ПолучитьОбновление</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПолучитьОбновлениеРасширеннаяПодсказка" id="45"/>
+				</Button>
+				<Button name="ВсеВкл" id="38">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<Height>3</Height>
+					<CommandName>Form.Command.ВсеВкл</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.CheckAll</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ВсеВклРасширеннаяПодсказка" id="39"/>
+				</Button>
+				<Button name="ВсеВыкл" id="40">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<Height>3</Height>
+					<CommandName>Form.Command.ВсеВыкл</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ВсеВыклРасширеннаяПодсказка" id="41"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<Page name="Обновить" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<CheckBoxField name="ОстаткиНоменклатуры" id="53">
+							<DataPath>ОстаткиНоменклатуры</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОстаткиНоменклатурыКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ОстаткиНоменклатурыРасширеннаяПодсказка" id="55"/>
+						</CheckBoxField>
+						<CheckBoxField name="Склады" id="5">
+							<DataPath>Склады</DataPath>
+							<TitleFont ref="style:NormalTextFont" height="10" kind="StyleItem" scale="100"/>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СкладыКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="7"/>
+						</CheckBoxField>
+						<CheckBoxField name="Подразделения" id="8">
+							<DataPath>Подразделения</DataPath>
+							<TitleFont ref="style:NormalTextFont" height="10" kind="StyleItem" scale="100"/>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПодразделенияКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ПодразделенияРасширеннаяПодсказка" id="10"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДефектыОборудования" id="46">
+							<DataPath>ДефектыОборудования</DataPath>
+							<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДефектыОборудованияКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ДефектыОборудованияРасширеннаяПодсказка" id="48"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТехнологическиеМеста" id="11">
+							<DataPath>ТехнологическиеМеста</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТехнологическиеМестаКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ТехнологическиеМестаРасширеннаяПодсказка" id="13"/>
+						</CheckBoxField>
+						<CheckBoxField name="СостоянияОборудования" id="26">
+							<DataPath>СостоянияОборудования</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СостоянияОборудованияКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СостоянияОборудованияРасширеннаяПодсказка" id="28"/>
+						</CheckBoxField>
+						<CheckBoxField name="ФизическиеЛица" id="32">
+							<DataPath>ФизическиеЛица</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФизическиеЛицаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ФизическиеЛицаРасширеннаяПодсказка" id="34"/>
+							<Events>
+								<Event name="OnChange">ФизическиеЛицаПользователиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ВидыПроверокОборудования" id="14">
+							<DataPath>ВидыПроверокОборудования</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВидыПроверокОборудованияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ВидыПроверокОборудованияРасширеннаяПодсказка" id="16"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОбъектыЭксплуатации" id="17">
+							<DataPath>ОбъектыЭксплуатации</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбъектыЭксплуатацииКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ОбъектыЭксплуатацииРасширеннаяПодсказка" id="19"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВидыДефектов" id="20">
+							<DataPath>ВидыДефектов</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВидыДефектовКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ВидыДефектовРасширеннаяПодсказка" id="22"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТехнологическиеОперации" id="23">
+							<DataPath>ТехнологическиеОперации</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТехнологическиеОперацииКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ТехнологическиеОперацииРасширеннаяПодсказка" id="25"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПричиныОтменыРемонтов" id="29">
+							<DataPath>ПричиныОтменыРемонтов</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПричиныОтменыРемонтовКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ПричиныОтменыРемонтовРасширеннаяПодсказка" id="31"/>
+						</CheckBoxField>
+						<CheckBoxField name="Пользователи" id="35">
+							<DataPath>Пользователи</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПользователиКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ПользователиРасширеннаяПодсказка" id="37"/>
+							<Events>
+								<Event name="OnChange">ФизическиеЛицаПользователиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКонстанты" id="60">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа константы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа константы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКонстантыРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<InputField name="ДатаОбновленияНоменклатуры" id="68">
+							<DataPath>НаборКонстант.ДатаОбновленияНоменклатуры</DataPath>
+							<MultiLine>true</MultiLine>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаОбновленияНоменклатурыКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ДатаОбновленияНоменклатурыРасширеннаяПодсказка" id="70"/>
+						</InputField>
+						<CheckBoxField name="ВидыНоменклатурыИсклИзАнализаПоИндНомерамВРН" id="65">
+							<DataPath>НаборКонстант.ВидыНоменклатурыИсклИзАнализаПоИндНомерамВРН</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВидыНоменклатурыИсклИзАнализаПоИндНомерамВРНКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="ВидыНоменклатурыИсклИзАнализаПоИндНомерамВРНРасширеннаяПодсказка" id="67"/>
+						</CheckBoxField>
+						<InputField name="ИнтервалПолученияОстатковТМЦ" id="62">
+							<DataPath>НаборКонстант.ИнтервалПолученияОстатковТМЦ</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ИнтервалПолученияОстатковТМЦКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ИнтервалПолученияОстатковТМЦРасширеннаяПодсказка" id="64"/>
+						</InputField>
+						<InputField name="ИнтервалОбмена" id="71">
+							<DataPath>НаборКонстант.ИнтервалОбмена</DataPath>
+							<MultiLine>true</MultiLine>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ИнтервалОбменаКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ИнтервалОбменаРасширеннаяПодсказка" id="73"/>
+						</InputField>
+						<InputField name="ПодразделениеПользователя" id="74">
+							<DataPath>НаборКонстант.ПодразделениеПользователя</DataPath>
+							<MultiLine>true</MultiLine>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПодразделениеПользователяКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ПодразделениеПользователяРасширеннаяПодсказка" id="76"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Склады" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склады</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Подразделения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТехнологическиеМеста" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технологические места</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидыПроверокОборудования" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды проверок оборудования / Общие виды ремонтов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТехнологическиеОперации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технологические операции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостоянияОборудования" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояния оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПричиныОтменыРемонтов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причины отмены ремонтов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизическиеЛица" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физические лица</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Пользователи" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектыЭксплуатации" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты эксплуатации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидыДефектов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды дефектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДефектыОборудования" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дефекты оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОстаткиНоменклатуры" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаборКонстант" id="14">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВсеВкл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все вкл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все вкл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВсеВкл</Action>
+		</Command>
+		<Command name="ВсеВыкл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все выкл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все вкл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВсеВыкл</Action>
+		</Command>
+		<Command name="ПолучитьОбновление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить обновление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить обновление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьОбновление</Action>
+		</Command>
+		<Command name="ОстаткиНоменклатуры" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОстаткиНоменклатуры</Action>
+		</Command>
+	</Commands>
+</Form>

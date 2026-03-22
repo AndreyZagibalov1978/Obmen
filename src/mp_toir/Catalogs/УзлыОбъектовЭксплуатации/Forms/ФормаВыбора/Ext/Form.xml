@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ФильтрУзлов" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтр узлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтр узлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ExtendedTooltip name="ФильтрУзловРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<CheckBoxField name="ДляПоказателейНаработки" id="37">
+					<DataPath>ДляПоказателейНаработки</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДляПоказателейНаработкиКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДляПоказателейНаработкиРасширеннаяПодсказка" id="39"/>
+					<Events>
+						<Event name="OnChange">ДляПоказателейНаработкиПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ДляВидовПроверокОборудования" id="40">
+					<DataPath>ДляВидовПроверокОборудования</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДляВидовПроверокОборудованияКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДляВидовПроверокОборудованияРасширеннаяПодсказка" id="42"/>
+					<Events>
+						<Event name="OnChange">ДляВидовПроверокОборудованияПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ДляРегистрацииДефекта" id="43">
+					<DataPath>ДляРегистрацииДефекта</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДляРегистрацииДефектаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДляРегистрацииДефектаРасширеннаяПодсказка" id="45"/>
+					<Events>
+						<Event name="OnChange">ДляРегистрацииДефектаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>Tree</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<ColumnGroup name="ГруппаУзелКласс" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа узел класс</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа узел класс</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаУзелКлассРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<LabelField name="Ссылка" id="16">
+							<DataPath>Список.Ссылка</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Узел</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаЕсть" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа есть</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа есть</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>3</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаЕстьРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="ЕстьПоказателиНаработки" id="22">
+							<DataPath>Список.ЕстьПоказателиНаработки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пок. измер.</v8:content>
+								</v8:item>
+							</Title>
+							<Width>1</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЕстьПоказателиНаработкиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ЕстьПоказателиНаработкиРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<LabelField name="ЕстьВидыПроверок" id="25">
+							<DataPath>Список.ЕстьВидыПроверок</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Виды пров.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЕстьВидыПроверокКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ЕстьВидыПроверокРасширеннаяПодсказка" id="27"/>
+						</LabelField>
+						<LabelField name="ЭтоРемУзел" id="32">
+							<DataPath>Список.ЭтоРемУзел</DataPath>
+							<ContextMenu name="ЭтоРемУзелКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ЭтоРемУзелРасширеннаяПодсказка" id="34"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	КлассыОбъектовЭксплуатацииПоказателиНаработки.Ссылка КАК КлассыПоказателейНаработки
+ПОМЕСТИТЬ вт_КлассыПоказателей
+ИЗ
+	Справочник.КлассыОбъектовЭксплуатации.ПоказателиНаработки КАК КлассыОбъектовЭксплуатацииПоказателиНаработки
+ГДЕ
+	НЕ КлассыОбъектовЭксплуатацииПоказателиНаработки.ПоказательНаработки = ЗНАЧЕНИЕ(Справочник.ПоказателиНаработки.ПустаяСсылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	КлассыОбъектовЭксплуатациимп_ВидыПроверок.Ссылка КАК Классы_ВидыПроверокОборудования
+ПОМЕСТИТЬ вт_Классы_ВидыПроверокОборудования
+ИЗ
+	Справочник.КлассыОбъектовЭксплуатации.мп_ВидыПроверок КАК КлассыОбъектовЭксплуатациимп_ВидыПроверок
+ГДЕ
+	НЕ КлассыОбъектовЭксплуатациимп_ВидыПроверок.ВидПроверокОборудования = ЗНАЧЕНИЕ(Справочник.мп_ВидыПроверокОборудования.ПустаяСсылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СправочникУзлыОбъектовЭксплуатации.Ссылка КАК Ссылка,
+	СправочникУзлыОбъектовЭксплуатации.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникУзлыОбъектовЭксплуатации.Владелец КАК Владелец,
+	СправочникУзлыОбъектовЭксплуатации.Родитель КАК Родитель,
+	СправочникУзлыОбъектовЭксплуатации.Наименование КАК Наименование,
+	СправочникУзлыОбъектовЭксплуатации.СерийныйНомер КАК СерийныйНомер,
+	СправочникУзлыОбъектовЭксплуатации.Класс КАК Класс,
+	СправочникУзлыОбъектовЭксплуатации.Статус КАК Статус,
+	СправочникУзлыОбъектовЭксплуатации.ВерсияДанныхЕРП КАК ВерсияДанныхЕРП,
+	СправочникУзлыОбъектовЭксплуатации.Предопределенный КАК Предопределенный,
+	СправочникУзлыОбъектовЭксплуатации.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	НЕ вт_КлассыПоказателей.КлассыПоказателейНаработки ЕСТЬ NULL КАК ЕстьПоказателиНаработки,
+	НЕ вт_Классы_ВидыПроверокОборудования.Классы_ВидыПроверокОборудования ЕСТЬ NULL КАК ЕстьВидыПроверок,
+	СправочникУзлыОбъектовЭксплуатации.ГруппаТиповУзлов КАК ГруппаТиповУзлов,
+	СправочникУзлыОбъектовЭксплуатации.ГруппаТиповУзлов = ЗНАЧЕНИЕ(Перечисление.Мечел_ГруппаТиповУзлов.Узел) КАК ЭтоРемУзел
+ПОМЕСТИТЬ вт_Общая
+ИЗ
+	Справочник.УзлыОбъектовЭксплуатации КАК СправочникУзлыОбъектовЭксплуатации
+		ЛЕВОЕ СОЕДИНЕНИЕ вт_КлассыПоказателей КАК вт_КлассыПоказателей
+		ПО СправочникУзлыОбъектовЭксплуатации.Класс = вт_КлассыПоказателей.КлассыПоказателейНаработки
+		ЛЕВОЕ СОЕДИНЕНИЕ вт_Классы_ВидыПроверокОборудования КАК вт_Классы_ВидыПроверокОборудования
+		ПО СправочникУзлыОбъектовЭксплуатации.Класс = вт_Классы_ВидыПроверокОборудования.Классы_ВидыПроверокОборудования
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	вт_Общая.Ссылка КАК Ссылка,
+	вт_Общая.ПометкаУдаления КАК ПометкаУдаления,
+	вт_Общая.Владелец КАК Владелец,
+	вт_Общая.Родитель КАК Родитель,
+	вт_Общая.Наименование КАК Наименование,
+	вт_Общая.СерийныйНомер КАК СерийныйНомер,
+	вт_Общая.Класс КАК Класс,
+	вт_Общая.Статус КАК Статус,
+	вт_Общая.ВерсияДанныхЕРП КАК ВерсияДанныхЕРП,
+	вт_Общая.Предопределенный КАК Предопределенный,
+	вт_Общая.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	вт_Общая.ЕстьПоказателиНаработки КАК ЕстьПоказателиНаработки,
+	вт_Общая.ЕстьВидыПроверок КАК ЕстьВидыПроверок,
+	вт_Общая.ГруппаТиповУзлов КАК ГруппаТиповУзлов,
+	вт_Общая.ЭтоРемУзел КАК ЭтоРемУзел
+ИЗ
+	вт_Общая КАК вт_Общая
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.УзлыОбъектовЭксплуатации КАК УзлыОбъектовЭксплуатации
+		ПО вт_Общая.Ссылка = УзлыОбъектовЭксплуатации.Ссылка
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ЕстьПоказателиНаработки
+				ТОГДА вт_Общая.ЕстьПоказателиНаработки = &amp;ЕстьПоказателиНаработки
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ЕстьВидыПроверок
+				ТОГДА вт_Общая.ЕстьВидыПроверок = &amp;ЕстьВидыПроверок
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ЭтоРемУзел
+				ТОГДА вт_Общая.ЭтоРемУзел = &amp;ЭтоРемУзел
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Статус</dcssch:dataPath>
+					<dcssch:field>Статус</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СерийныйНомер</dcssch:dataPath>
+					<dcssch:field>СерийныйНомер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьПоказателиНаработки</dcssch:dataPath>
+					<dcssch:field>ЕстьПоказателиНаработки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть показатели наработки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Родитель</dcssch:dataPath>
+					<dcssch:field>Родитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Владелец</dcssch:dataPath>
+					<dcssch:field>Владелец</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВерсияДанныхЕРП</dcssch:dataPath>
+					<dcssch:field>ВерсияДанныхЕРП</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Класс</dcssch:dataPath>
+					<dcssch:field>Класс</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьВидыПроверок</dcssch:dataPath>
+					<dcssch:field>ЕстьВидыПроверок</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть виды проверок</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГруппаТиповУзлов</dcssch:dataPath>
+					<dcssch:field>ГруппаТиповУзлов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЭтоРемУзел</dcssch:dataPath>
+					<dcssch:field>ЭтоРемУзел</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это рем узел</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления1</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Родитель1</dcssch:dataPath>
+					<dcssch:field>Родитель1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Родитель1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Владелец1</dcssch:dataPath>
+					<dcssch:field>Владелец1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование1</dcssch:dataPath>
+					<dcssch:field>Наименование1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка1</dcssch:dataPath>
+					<dcssch:field>Ссылка1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КаталожныйНомер</dcssch:dataPath>
+					<dcssch:field>КаталожныйНомер</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>ЕстьВидыПроверок</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть виды проверок</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:boolean">false</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ЕстьПоказателиНаработки</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть показатели наработки</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:boolean">false</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ЭтоРемУзел</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это рем узел</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:boolean">false</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<MainTable>Catalog.УзлыОбъектовЭксплуатации</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДляПоказателейНаработки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для показателей наработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДляВидовПроверокОборудования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для видов проверок оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДляРегистрацииДефекта" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для регистрации дефекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЕстьПоказателиНаработки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ЕстьПоказателиНаработки</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightSteelBlue</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЕстьВидыПроверок</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ЕстьВидыПроверок</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#B0C4DE</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЭтоРемУзел</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ЭтоРемУзел</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#B0C4DE</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ЕстьПоказателиНаработки">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЕстьВидыПроверок">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЭтоРемУзел">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

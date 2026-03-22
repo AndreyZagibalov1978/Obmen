@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>О пользователе</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>ChangeHistory</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>ShowInList</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<TitleLocation>Top</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Логин" id="7">
+			<DataPath>Объект.Логин</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя для входа</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<TitleLocation>Top</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ContextMenu name="ЛогинКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Pages name="Страницы" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<Page name="Основная" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОсновнаяРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<LabelField name="ИдентификаторПользователяИБ" id="4">
+							<DataPath>Объект.ИдентификаторПользователяИБ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор пользователя</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:AccentColor</TitleTextColor>
+							<TitleFont ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<TitleLocation>Top</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ИдентификаторПользователяИБКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ИдентификаторПользователяИБРасширеннаяПодсказка" id="6"/>
+						</LabelField>
+						<InputField name="ПользовательОС" id="10">
+							<DataPath>Объект.ПользовательОС</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПользовательОСКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ПользовательОСРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="Организация" id="13">
+							<DataPath>Объект.Организация</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Подразделение" id="16">
+							<DataPath>Объект.Подразделение</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="Дополнительно" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДополнительноРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Table name="Роли" id="19">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Роли</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РолиКонтекстноеМеню" id="20"/>
+							<AutoCommandBar name="РолиКоманднаяПанель" id="21"/>
+							<ExtendedTooltip name="РолиРасширеннаяПодсказка" id="22"/>
+							<SearchStringAddition name="РолиСтрокаПоиска" id="23">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиСтрокаПоискаКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="РолиСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РолиСостояниеПросмотра" id="26">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиСостояниеПросмотраКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="РолиСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РолиУправлениеПоиском" id="29">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиУправлениеПоискомКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="РолиУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РолиНомерСтроки" id="32">
+									<DataPath>Объект.Роли.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РолиНомерСтрокиКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="РолиНомерСтрокиРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<InputField name="РолиРоль" id="35">
+									<DataPath>Объект.Роли.Роль</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="РолиРольКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="РолиРольРасширеннаяПодсказка" id="37"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Пользователи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

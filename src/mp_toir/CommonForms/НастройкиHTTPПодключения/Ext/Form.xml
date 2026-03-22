@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>ChangeHistory</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="СтрокаПодключенияHTTP" id="13">
+			<DataPath>НаборКонстант.СтрокаПодключенияHTTP</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка подключения HTTP сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка подключения HTTP сервиса одинакова для всех организаций (mechel/hs/MobileExchange), инициализируется автоматически.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ContextMenu name="СтрокаПодключенияHTTPКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СтрокаПодключенияHTTPРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="СтрокаПодключенияIP" id="16">
+			<DataPath>НаборКонстант.СтрокаПодключенияIP</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IP адрес</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IP адрес публикации базы на сервере. Алиас базы типа ukm-sapp не устанавливать!</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ContextMenu name="СтрокаПодключенияIPКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СтрокаПодключенияIPРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="СтрокаПодключенияПорт" id="19">
+			<DataPath>НаборКонстант.СтрокаПодключенияПорт</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:AccentColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт публикации базы, по-умолчанию 80</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>true</HorizontalStretch>
+			<SpinButton>true</SpinButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ContextMenu name="СтрокаПодключенияПортКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СтрокаПодключенияПортРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<CheckBoxField name="ИспользоватьПодключениеSSL" id="29">
+			<DataPath>НаборКонстант.ИспользоватьПодключениеSSL</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьПодключениеSSLКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ИспользоватьПодключениеSSLРасширеннаяПодсказка" id="31"/>
+		</CheckBoxField>
+		<InputField name="БазаЕРП" id="26">
+			<DataPath>НаборКонстант.БазаЕРП</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="БазаЕРПКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="БазаЕРПРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<UsualGroup name="ГруппаНастройкиПодключения" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки подключения</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаНастройкиПодключенияРасширеннаяПодсказка" id="25"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
