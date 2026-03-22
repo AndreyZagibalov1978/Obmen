@@ -2079,6 +2079,7 @@
 			<CommonModule>ЭлектроннаяПодписьСлужебныйПовтИсп</CommonModule>
 			<CommonModule>ЭлектроннаяПодписьСлужебныйРФ</CommonModule>
 			<CommonModule>ЯндексПереводчик</CommonModule>
+			<CommonModule>КоннекторHTTP</CommonModule>
 			<CommonAttribute>КомментарийЯзык1</CommonAttribute>
 			<CommonAttribute>КомментарийЯзык2</CommonAttribute>
 			<CommonAttribute>НаименованиеЯзык1</CommonAttribute>
